@@ -1,0 +1,98 @@
+.experiencia {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  max-width: 2000px;
+  margin: 0px auto;
+  gap: 200px;
+  margin-bottom: 100px;
+  padding: 0px 40px;
+}
+.lista-maior {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  margin-top: 100px;
+}
+h2 {
+  font-size: 7.5rem;
+  max-width: 5ch;
+  word-break: break-all;
+  text-transform: uppercase;
+}
+.experiencia h2 {
+  color: rgb(211, 211, 211);
+}
+.experiencia p {
+  margin: 0px;
+}
+.lista-menor {
+  display: grid;
+  gap: 20px 40px;
+  grid-template-columns: 1fr 1fr;
+  padding: 20px;
+  background-color: rgb(240, 240, 240);
+  border-radius: 4px;
+  position: relative;
+}
+.descricao {
+  font-size: 1.8rem;
+}
+.lista-menor ul {
+  display: flex;
+  gap: 20px;
+  justify-content: start;
+  flex-wrap: wrap;
+}
+.lista-menor li {
+  background-color: white;
+  padding: 10px 20px;
+  align-self: start;
+  border-radius: 4px;
+}
+.detalhe::before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 128px;
+  background: url(../img/detalhe.svg) no-repeat;
+  position: absolute;
+  top: -67px;
+  left: -10px;
+}
+.experiencia span {
+  position: absolute;
+  left: -80px;
+  top: 23px;
+}
+@media (max-width: 1500px) {
+  h2 {
+    font-size: 7rem;
+  }
+}
+@media (max-width: 1200px) {
+  h2 {
+    font-size: 6rem;
+  }
+}
+@media (max-width: 1050px) {
+  h2 {
+    font-size: 3rem;
+    max-width: 100%;
+  }
+  .experiencia {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 100px;
+  }
+  .descricao {
+    font-size: 1.4rem;
+  }
+  .experiencia span {
+    display: none;
+  }
+}
+@media (max-width: 400px) {
+  .experiencia {
+    padding: 0px;
+  }
+}

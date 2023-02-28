@@ -1,0 +1,135 @@
+.form {
+  max-width: 100%;
+  background-color: #141414;
+}
+.formacao {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  max-width: 2000px;
+  margin: 0px auto;
+  gap: 200px;
+  color: #b1b1b1;
+  padding: 200px 40px;
+  position: relative;
+}
+.formacao .div {
+  display: grid;
+  gap: 50px;
+}
+.formacao h2 {
+  color: black;
+  max-width: 6ch;
+  margin-top: 50px;
+}
+.formacao p {
+  color: #b1b1b1;
+}
+.formacao strong {
+  color: white;
+}
+.formacoes {
+  display: flex;
+  gap: 30px;
+  color: white;
+}
+.formacoes li {
+  background-color: black;
+  padding: 20px;
+  flex: 1;
+  position: relative;
+}
+.formacoes p,
+span {
+  color: #a1a1a1;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+.formacoes li {
+  display: grid;
+  gap: 20px;
+}
+.cursos {
+  position: relative;
+}
+h4 {
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+.curso::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  background: url(../img/cursos.svg);
+  position: absolute;
+  left: -40px;
+  top: 15px;
+}
+.idioma::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  background: url(../img/idiomas.svg);
+  position: absolute;
+  left: -40px;
+  top: 15px;
+}
+.cursos {
+  display: grid;
+  gap: 15px;
+}
+.cursos li {
+  color: white;
+}
+.cursos ul {
+  display: grid;
+  gap: 20px;
+}
+.posicao {
+  position: relative;
+}
+.formacao h2::after {
+  content: "";
+  width: 128px;
+  height: 128px;
+  background: url(../img/detalhe.svg);
+  position: absolute;
+  bottom: -64px;
+  left: 40px;
+}
+@media (max-width: 1050px) {
+  .formacao h2 {
+    font-size: 3rem;
+    max-width: 100%;
+  }
+  .formacao {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 100px;
+    padding: 100px 40px;
+  }
+  .formacao h2 {
+    margin-top: 0px;
+  }
+  .descricao {
+    font-size: 1.4rem;
+  }
+  .cursos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .idioma::before {
+    top: 15px;
+    left: -40px;
+  }
+}
+@media (max-width: 600px) {
+  .formacoes {
+    flex-direction: column;
+  }
+  .formacao {
+    padding: 30px;
+  }
+  .formacao h2::after {
+    display: none;
+  }
+}

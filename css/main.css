@@ -1,0 +1,103 @@
+main {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  max-width: 2000px;
+  margin: 0px auto;
+  gap: 200px;
+  align-items: center;
+  margin-bottom: 200px;
+  padding: 0px 40px;
+}
+h1 {
+  font-size: 7rem;
+  text-transform: capitalize;
+  position: relative;
+  margin: 0px;
+  padding: 0px;
+}
+h1::before {
+  content: "";
+  display: block;
+  width: 150px;
+  height: 120px;
+  background: url(../img/detalhe.svg) no-repeat;
+  position: absolute;
+  z-index: -1;
+  top: -25px;
+  left: -40px;
+}
+p {
+  font-size: 1.3rem;
+  margin-top: 30px;
+  color: #414141;
+}
+@media (max-width: 1500px) {
+  h1 {
+    font-size: 5rem;
+  }
+}
+@media (max-width: 1250px) {
+  h1 {
+    font-size: 4rem;
+  }
+}
+@media (max-width: 1000px) {
+  main {
+    gap: 150px;
+  }
+  h1 {
+    font-size: 4rem;
+  }
+}
+@media (max-width: 900px) {
+  main {
+    gap: 100px;
+  }
+  h1 {
+    font-size: 3.5rem;
+  }
+  h1::before {
+    left: -45px;
+    top: -30px;
+  }
+}
+@media (max-width: 750px) {
+  main {
+    gap: 60px;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+  h1::before {
+    width: 100px;
+    height: 30px;
+    left: -68px;
+  }
+  p {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 600px) {
+  main {
+    margin-bottom: 80px;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  h1::before {
+    width: 100px;
+    height: 30px;
+    left: -74px;
+  }
+}
+@media (max-width: 500px) {
+  main img {
+    display: none;
+  }
+  main {
+    gap: 0px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto;
+  }
+}
